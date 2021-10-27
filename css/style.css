@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+body {
+    background-color:gray;
+    color: white;
+    margin: 0px;
+}
+
+footer {
+    background-color: blue;
+    bottom: 0%;
+    font-family: 'ZCOOL KuaiLe';
+    position: fixed;
+    width:100%;
+    text-align: center;
+}
+
+header {
+    background-color: gray;
+}
+
+p { margin: 10px;}
+h1 { margin: 8px;}
+
+nav {
+    background-color: #cc0000;
+    width: 100%;
+    min-height: 0.1em;
+    max-height: 1.6em; !!
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 999;
+}
+
+.login, .contact {
+    background-color: darkslategrey;
+    padding: 10px;
+}
+
+.boton {
+    background-color: red;
+    color: white;
+    font-weight:bolder;
+    padding: 10px;
+}
+
+.menu {
+    list-style-type: none;
+    list-style: none;
+    background-color: #cc0000;
+    clear: both;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height .2s ease-out;
+}
+
+.menu li {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #cc0000;
+}
+
+.menu li:hover,
+.menu-btn:hover {
+    background-color:blue;
+    font-weight:bolder;
+}
+
+.menu li a {
+    text-decoration:none;
+    color:white;
+    text-align: center;
+    padding: 10px 10px;
+    display: block;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.menu li i {
+    color: black;
+}
+/* menu icon */
+
+.menu-icon {
+    cursor: pointer;
+    display: block;
+    float: left;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    position: relative;
+    user-select: none;
+}
+
+.menu-icon .navicon {
+    display: grid;
+    height: 2px;
+    position: relative;
+    transition-duration: 1s;
+    width: 20px;
+}
+
+.menu-icon .navicon:after {
+    background:red;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.menu-icon .navicon:before {
+    top: 5px;
+}
+
+.menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* ocultar checkbox */
+.menu-btn {
+    display: none;
+}
+
+/* altura menu cel */
+.menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(90deg);
+}
+
+.menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+  /* For celphone: */
+  .menu li a {
+    padding: 2px 1px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+    @media only screen and (min-width: 600px) {
+  /* For tablet: */
+  nav {
+    min-height: 1.6em;
+}
+  .menu li a {
+    padding: 2px 0px;
+    font-size: 12px;
+}
+  .menu li {
+        float: left;
+    }
+    .menu {
+        clear: none;
+        float: left;
+        max-height: none;
+    }
+    .menu-icon {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    nav {
+        min-height: 2.6em;
+    }
+        .menu li a {
+        padding: 10px 10px;
+        font-size: 16px;
+    }
+          .menu li {
+        float: left;
+    }
+    .menu {
+        clear: none;
+        float: left;
+        max-height: none;
+    }
+    .menu-icon {
+        display: none;
+    }
+}
+
+/**************************************************/
+/*             articles                           */
+/**************************************************/
+section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 95%;
+    text-align: center;
+}
+
+article {
+    text-align: left;
+    vertical-align: middle;
+    flex: 25vw;
+    max-width: 260px;
+    padding: 10px;
+}
+
+article img {
+    width: 95%;
+    min-width: 150px;
+    max-width: 25vw;
+}
+
+article img:hover {
+    transition: all 1s;
+    transform: scale(1.1);
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    filter:brightness(140%);
+}
+
+article img:active {
+    box-shadow: 10px 10px 40px #ededed;
+}
+
+/* body > section > article:nth-child(2) > a > img { 
+    width:60px;
+    margin-top: 40px;
+    padding: 20%;
+    border: 1px solid red;
+};
+ */
+a { 
+    color: white
+}
+
+.fa-film {
+    color: black;
+}
+
+/***********************************/
+/*** MOVIES   **********************/
+
+.container {
+   display: flex;
+    flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.item {
+    border-width: 20px;
+    border-color: red;
+}
+
+/******************************/
+/*  Defino los items de la grilla*/
+/******************************/
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.content {
+    grid-area: content;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header'
+                         'menu menu content content'
+                         'footer footer footer footer';
+}
+
+/* @media only screen and (max-width: 670px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: 'header'
+                             'menu'
+                             'content'
+                             'footer';
+    }
+}
+ */
