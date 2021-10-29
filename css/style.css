@@ -20,13 +20,17 @@ h2 {
     margin: 10px;
 }
 
+.logo {
+    height:60px;
+}
+
 a {
     color:white;
     text-decoration: none;
  }
- 
+
 body {
-    background-color:gray;
+    background-color:black;
     color: white;
     margin: 0;
     font-family: "Roboto";
@@ -40,8 +44,8 @@ body {
 
 .content {
     grid-area: content;
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
 }
 
 .footer {
@@ -54,9 +58,15 @@ body {
     text-align: center;
 }
 
+.notflix {
+    font-size: 50px;
+    padding: 20px;
+    vertical-align: top;
+   }
+
 .menu {
     grid-area: menu;
-    background-color: darkgreen;
+    background-color: indigo;
 }
 
 .menu ul {
@@ -87,7 +97,7 @@ body {
 
 .menu li:hover,
 .menu-btn:hover {
-    background-color:blue;
+    background-color:black;
     font-weight:bolder;
     cursor:pointer;
 }
@@ -126,9 +136,9 @@ body {
         margin: 100px;
         padding: 0;
         position: absolute;
-        width: 180px;
-        margin-left: -90%;
-        transition-duration: .5s;
+        width: 160px;
+        margin-left: -160px;
+        transition-duration: .3s;
     }
     
     .menu-icon {
@@ -143,7 +153,12 @@ body {
     .menu ul { 
         flex-direction: column;
     }
-    
+ }
+
+@media (max-width: 400px) {
+    .notflix {
+        display: none;
+    }
 }
 
 /**************************************************/
@@ -153,7 +168,6 @@ section {
     display: flex;
     flex-wrap: wrap;
     padding: 0px;
-    width: 95%;
     text-align: center;
 }
 
@@ -162,11 +176,11 @@ article {
     vertical-align: middle;
     flex: 25vw;
     max-width: 260px;
-    padding: 10px;
+    padding: 5px;
 }
 
 article img {
-    width: 95%;
+    width: 90%;
     min-width: 150px;
     max-width: 25vw;
 }
@@ -176,9 +190,10 @@ article img:hover {
     transform: scale(1.1);
     -ms-transform: scale(1.1); /* IE 9 */
     -webkit-transform: scale(1.1); /* Safari 3-8 */
-    filter:brightness(140%);
+    filter:brightness(120%);
+    box-shadow: 10px 10px 40px purple;
 }
 
 article img:active {
-    box-shadow: 10px 10px 40px #ededed;
+    box-shadow: 10px 10px 40px yellow;
 }
