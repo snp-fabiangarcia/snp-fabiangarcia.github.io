@@ -51,7 +51,7 @@ body {
 .footer {
     grid-area: footer;
     bottom: 0;
-    background-color: blue;
+    background-color: darkblue;
     font-family: 'ZCOOL KuaiLe';
     position: fixed;
     width:100%;
@@ -62,11 +62,11 @@ body {
     font-size: 50px;
     padding: 20px;
     vertical-align: top;
-   }
+}
 
 .menu {
     grid-area: menu;
-    background-color: indigo;
+    background-color:darkblue;
 }
 
 .menu ul {
@@ -110,39 +110,53 @@ body {
                        'menu'    45px
                        'content' auto
                        'footer'  10px;
-}
+    }
 
-.menu ul {
-    margin: 0;
-    list-style: none;
-    display: inline-flex;
-    flex-direction: row;
-}
+    .menu ul {
+        margin: 0;
+        list-style: none;
+        display: inline-flex;
+        flex-direction: row;
+    }
 
-.menu ul li a {
-    font-size: 16px;
-}
+    .menu ul li a {
+        font-size: 16px;
+    }
 
 }
 
 /* Celphone: */
 @media (max-width: 560px) {
-    .menu-icon {
-        width: 60px;
-        cursor: pointer;
-    }  
-    
+    .grid-container {
+        display: grid;
+        grid-template: 'header'  40px
+                       'menu'    40px
+                       'content' auto
+                       'footer'  6px;
+    }
+
+    .logo {
+        height:40px;
+    }
+
+    .notflix {
+        font-size: 30px;
+    }
+
     .menu {
-        margin: 100px;
+        margin: 80px;
         padding: 0;
         position: absolute;
         width: 160px;
         margin-left: -160px;
         transition-duration: .3s;
     }
-    
+
     .menu-icon {
+        margin: -10px;
         display: block;
+        height: 40px;
+        cursor: pointer;
     }
 
     #menu-btn:checked ~ .menu {
